@@ -32,9 +32,25 @@ namespace ScoreCalculator1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)//Add button is adding and averaging scores
         {
+            
+            int scoreTotal = 0;//Zero value is passed to score total variable to start adding.
+            int  scoreCounts = 1;// staring count at 1
+            int scoreAverage;
+            int score = 0;
 
+            if (Int32.TryParse(txtScore.Text, out score)) { 
+               scoreTotal = (int) scoreTotal + score;//cast to integer 
+                txtScoreTotal.Text = scoreTotal.ToString();// convert text to string by using ToStsring method
+               scoreAverage =  (int)scoreTotal /scoreCounts;
+                txtAverage.Text = scoreAverage.ToString();
+               scoreCounts++;
+            }
+            else
+            {
+                MessageBox.Show("Enter only number", "Error");
+            }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -44,6 +60,20 @@ namespace ScoreCalculator1
 
         private void label1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnClearScore_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+                  {
+                this.Close();//to end application
+                  }
 
         }
     }

@@ -32,10 +32,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtScore = new System.Windows.Forms.TextBox();
+            this.txtScoreTotal = new System.Windows.Forms.TextBox();
+            this.txtScoreCount = new System.Windows.Forms.TextBox();
+            this.txtAverage = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClearScore = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
@@ -79,51 +79,51 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Average:";
             // 
-            // textBox1
+            // txtScore
             // 
-            this.textBox1.Location = new System.Drawing.Point(161, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(48, 22);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtScore.Location = new System.Drawing.Point(161, 45);
+            this.txtScore.Name = "txtScore";
+            this.txtScore.Size = new System.Drawing.Size(48, 22);
+            this.txtScore.TabIndex = 0;
+            this.txtScore.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txtScoreTotal
             // 
-            this.textBox2.Location = new System.Drawing.Point(161, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(48, 22);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.TabStop = false;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtScoreTotal.Location = new System.Drawing.Point(161, 90);
+            this.txtScoreTotal.Name = "txtScoreTotal";
+            this.txtScoreTotal.ReadOnly = true;
+            this.txtScoreTotal.Size = new System.Drawing.Size(48, 22);
+            this.txtScoreTotal.TabIndex = 5;
+            this.txtScoreTotal.TabStop = false;
+            this.txtScoreTotal.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // txtScoreCount
             // 
-            this.textBox3.Location = new System.Drawing.Point(161, 133);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(48, 22);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.TabStop = false;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtScoreCount.Location = new System.Drawing.Point(161, 133);
+            this.txtScoreCount.Name = "txtScoreCount";
+            this.txtScoreCount.ReadOnly = true;
+            this.txtScoreCount.Size = new System.Drawing.Size(48, 22);
+            this.txtScoreCount.TabIndex = 6;
+            this.txtScoreCount.TabStop = false;
+            this.txtScoreCount.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox4
+            // txtAverage
             // 
-            this.textBox4.Location = new System.Drawing.Point(161, 182);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(48, 22);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.TabStop = false;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAverage.Location = new System.Drawing.Point(161, 182);
+            this.txtAverage.Name = "txtAverage";
+            this.txtAverage.ReadOnly = true;
+            this.txtAverage.Size = new System.Drawing.Size(48, 22);
+            this.txtAverage.TabIndex = 7;
+            this.txtAverage.TabStop = false;
+            this.txtAverage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(255, 44);
+            this.btnAdd.Location = new System.Drawing.Point(255, 45);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(92, 33);
             this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Add";
+            this.btnAdd.Text = "&Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -135,6 +135,7 @@
             this.btnClearScore.TabIndex = 2;
             this.btnClearScore.Text = "Clear Scores";
             this.btnClearScore.UseVisualStyleBackColor = true;
+            this.btnClearScore.Click += new System.EventHandler(this.btnClearScore_Click);
             // 
             // btnExit
             // 
@@ -142,8 +143,9 @@
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(92, 36);
             this.btnExit.TabIndex = 3;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // FormScore
             // 
@@ -154,10 +156,10 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClearScore);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAverage);
+            this.Controls.Add(this.txtScoreCount);
+            this.Controls.Add(this.txtScoreTotal);
+            this.Controls.Add(this.txtScore);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -175,10 +177,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtScore;
+        private System.Windows.Forms.TextBox txtScoreTotal;
+        private System.Windows.Forms.TextBox txtScoreCount;
+        private System.Windows.Forms.TextBox txtAverage;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClearScore;
         private System.Windows.Forms.Button btnExit;
