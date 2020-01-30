@@ -34,18 +34,18 @@ namespace ScoreCalculator1
 
         private void button1_Click(object sender, EventArgs e)//Add button is adding and averaging scores
         {
-            
+
             int scoreTotal = 0;//Zero value is passed to score total variable to start adding.
-            int  scoreCounts = 1;// staring count at 1
+            int scoreCounts = 1;// staring count at 1
             int scoreAverage;
             int score = 0;
 
-            if (Int32.TryParse(txtScore.Text, out score)) { 
-               scoreTotal = (int) scoreTotal + score;//cast to integer 
+            if (Int32.TryParse(txtScore.Text, out score)) {
+                scoreTotal = (int)scoreTotal + score;//cast to integer 
                 txtScoreTotal.Text = scoreTotal.ToString();// convert text to string by using ToStsring method
-               scoreAverage =  (int)scoreTotal /scoreCounts;
-                txtAverage.Text = scoreAverage.ToString();
-               scoreCounts++;
+                scoreAverage = (int)scoreTotal / scoreCounts;
+                txtAverage.Text = scoreAverage.ToString("n1");
+                scoreCounts++;
             }
             else
             {
@@ -64,9 +64,15 @@ namespace ScoreCalculator1
         }
 
         private void btnClearScore_Click(object sender, EventArgs e)
-        {
-
-
+        { 
+            //Clear form
+            txtScore.Clear();
+            txtScoreTotal.Clear();
+            txtScoreCount.Clear();
+            txtAverage.Clear();
+            txtScoreTotal.Text = "0";
+            txtScoreCount.Text = "0";
+            txtScore.Focus();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

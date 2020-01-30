@@ -105,6 +105,7 @@
             this.txtScoreCount.Size = new System.Drawing.Size(48, 22);
             this.txtScoreCount.TabIndex = 6;
             this.txtScoreCount.TabStop = false;
+            this.txtScoreCount.Text = "\r\n";
             this.txtScoreCount.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtAverage
