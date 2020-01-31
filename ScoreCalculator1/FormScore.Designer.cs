@@ -153,7 +153,7 @@
             this.AcceptButton = this.btnAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(471, 309);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnClearScore);
             this.Controls.Add(this.btnAdd);
