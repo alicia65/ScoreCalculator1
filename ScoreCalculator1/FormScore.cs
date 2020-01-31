@@ -43,13 +43,13 @@ namespace ScoreCalculator1
             if (Int32.TryParse(txtScore.Text, out score)) {
                 scoreTotal = (int)scoreTotal + score;//cast to integer 
                 txtScoreTotal.Text = scoreTotal.ToString();// convert text to string by using ToStsring method
-                scoreAverage = (int)scoreTotal / scoreCounts;
-                txtAverage.Text = scoreAverage.ToString("n1");
-                scoreCounts++;
+                scoreAverage = (int)scoreTotal / scoreCounts;//to get average scores: cast scoreTotal to integer first and then divide by score counts
+                txtAverage.Text = scoreAverage.ToString("n1");//convert text to string by using ToString method 
+                scoreCounts++;//add count
             }
             else
             {
-                MessageBox.Show("Enter only number", "Error");
+                MessageBox.Show("Enter only number", "Error");//display text to inform user to enter numbers
             }
         }
 
@@ -65,7 +65,7 @@ namespace ScoreCalculator1
 
         private void btnClearScore_Click(object sender, EventArgs e)
         { 
-            //Clear form
+            //Following textboxes clear data by using clear() method
             txtScore.Clear();
             txtScoreTotal.Clear();
             txtScoreCount.Clear();
@@ -78,7 +78,7 @@ namespace ScoreCalculator1
         private void btnExit_Click(object sender, EventArgs e)
         {
                   {
-                this.Close();//to end application
+                this.Close();//to end application or close program
                   }
 
         }
