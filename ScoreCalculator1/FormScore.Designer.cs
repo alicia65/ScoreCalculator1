@@ -166,7 +166,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormScore";
-            this.Text = "Score Calculator";
+            this.Text = "Score Calculator1";
             this.ResumeLayout(false);
             this.PerformLayout();
 
