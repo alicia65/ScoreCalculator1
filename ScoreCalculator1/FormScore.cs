@@ -12,6 +12,9 @@ namespace ScoreCalculator1
 {
     public partial class FormScore : Form
     {
+        //class variables use in the program
+        int scoreTotal = 0;//Zero value is passed to score total variable to start adding.
+        int scoreCounts = 1;// start counting at value 1 which is passed to scoreCounts
         public FormScore()
         {
             InitializeComponent();
@@ -34,16 +37,15 @@ namespace ScoreCalculator1
 
         private void button1_Click(object sender, EventArgs e)//Add button is adding and averaging scores
         {
-
-            int scoreTotal = 0;//Zero value is passed to score total variable to start adding.
-            int scoreCounts = 1;// staring count at 1
+            
             int scoreAverage;
             int score = 0;
 
             if (Int32.TryParse(txtScore.Text, out score)) {
                 scoreTotal = (int)scoreTotal + score;//cast to integer 
                 txtScoreTotal.Text = scoreTotal.ToString();// convert text to string by using ToStsring method
-                scoreAverage = (int)scoreTotal / scoreCounts;//to get average scores: cast scoreTotal to integer first and then divide by score counts
+                scoreAverage = (int)scoreTotal / scoreCounts;//to get average scores: cast scoreTotal to integer 
+                //first and then divide by score counts
                 txtAverage.Text = scoreAverage.ToString("n1");//convert text to string by using ToString method 
                 scoreCounts++;//add count
             }
@@ -55,7 +57,11 @@ namespace ScoreCalculator1
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
+            if (Int32.TryParse(txtScoreCount.Text, out scoreCounts))
 
+                txtScoreCount.Text = scoreCounts.ToString();//ToString method converts text scores to integer
+                 
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
