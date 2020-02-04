@@ -47,7 +47,10 @@ namespace ScoreCalculator1
                 scoreAverage = (int)scoreTotal / scoreCounts;//to get average scores: cast scoreTotal to integer 
                 //first and then divide by score counts
                 txtAverage.Text = scoreAverage.ToString("n1");//convert text to string by using ToString method 
-                scoreCounts++;//add count
+
+                //show the scoreCounts value in the txtScoreCount here
+                txtScoreCount.Text = scoreCounts.ToString();//Display text in txtScoreCount and ToString method converts text to string
+                scoreCounts++;//add scores one increment at a time
             }
             else
             {
@@ -57,13 +60,13 @@ namespace ScoreCalculator1
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
+
             if (Int32.TryParse(txtScoreCount.Text, out scoreCounts))
 
                 txtScoreCount.Text = scoreCounts.ToString();//ToString method converts text scores to integer
-                 
-            
-        }
-
+        }  
+           
+        
         private void label1_Click(object sender, EventArgs e)
         {
 
